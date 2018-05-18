@@ -1,3 +1,9 @@
+# TODO:
+# 1. Fix the error message when the "-t" option is missing.
+# 2. Record the command line in the logging.
+# 3. Update the README with background, use, and install info.
+#
+
 import sys, os
 # Add the tests and library to the path for execution
 p = os.path.dirname(os.path.abspath(__file__))

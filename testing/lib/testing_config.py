@@ -122,20 +122,24 @@ class testingConfig:
             epilog = "\nERROR: For more help use '%s -h -V'\n"%(sys.argv[0])
             if args.test == '':
                 print epilog
-                raise Exception("\nRequired value for '-t' parameter (%s)"%('|'.join(test_list)))
+                print "\nRequired value for '-t' parameter (%s)"%('|'.join(test_list))
+                parser.exit(1)
 
             if args.zone < 0 or args.zone > 7:
                 print epilog
-                raise Exception("\nInvalid zone. Valid values are 0 - 7")
+                print "\nInvalid zone. Valid values are 0 - 7"
+                parser.exit(1)
             
             if args.value < 0 or args.value > 100.0:
                 print epilog
-                raise Exception("\nInvalid value. Valid values are 0.0 - 100.0")
+                print "\nInvalid value. Valid values are 0.0 - 100.0"
+                parser.exit(1)
 
             m = re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', args.ip_addr)
             if None == m:
                 print epilog
-                raise Exception("\nInvalid ip address. Valid values are of the form xxx.xxx.xxx.xxx, where x is a decimal digit.")
+                print "\nInvalid ip address. Valid values are of the form xxx.xxx.xxx.xxx, where x is a decimal digit."
+                parser.exit(1)
 
         return args
 
