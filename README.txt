@@ -1,6 +1,9 @@
+
+This app tests modbus transactions for the PARIS100 product. 
+
 $ python -m testing -hV > README.txt
 
-usage: __main__.py [-h] [-V] [-i IP_ADDR] [-z ZONE] [-v VALUE] [-s SLEEP]
+usage: python -m testing [-h] [-V] [-i IP_ADDR] [-z ZONE] [-v VALUE] [-s SLEEP]
                    [-p PING] [-w WATCHDOG] [-l LOGS] [-f FILENAME]
                    [-m MAX_TEMP] [-t TEST]
 
