@@ -1,7 +1,8 @@
-$ python testing/testing.py -hV
-usage: testing.py [-h] [-V] [-i IP_ADDR] [-z ZONE] [-v VALUE] [-s SLEEP]
-                  [-p PING] [-w WATCHDOG] [-l LOGS] [-f FILENAME]
-                  [-m MAX_TEMP] [-t TEST]
+$ python -m testing -hV > README.txt
+
+usage: __main__.py [-h] [-V] [-i IP_ADDR] [-z ZONE] [-v VALUE] [-s SLEEP]
+                   [-p PING] [-w WATCHDOG] [-l LOGS] [-f FILENAME]
+                   [-m MAX_TEMP] [-t TEST]
 
 General purpose testing system
 
@@ -21,12 +22,12 @@ optional arguments:
 
 wdrt: WDT_Testing
 This test does a basic modbus watchdog timer test
-by reading some registers periodically. If the
+by reading some registers periodically. If the 
 watchdog trips then that is a problem.
 Uses: -i, -s, -p, -w, -l, -f, -t
 
 ctr: CT_Testing
-This test is used to activate a heater so that the current
+This test is used to activate a heater so that the current 
 can be measured.
 Uses: -i, -z, -v, -s, -p, -l, -f
 
@@ -37,7 +38,7 @@ Uses: -i, -s, -p, -w, -l, -f, -t
 
 wdtt: WD_Timer_Testing
 This test does a basic modbus watchdog timer test
-by reading many registers periodically. If the
+by reading many registers periodically. If the 
 watchdog trips then that is a problem.
 Uses: -i, -s, -p, -w, -l, -f, -t
 
